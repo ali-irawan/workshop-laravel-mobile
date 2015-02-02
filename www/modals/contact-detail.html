@@ -1,0 +1,37 @@
+<ion-modal-view>
+
+  <!-- Modal header bar -->
+  <ion-header-bar class="bar bar-header bar-positive">
+    <h1 class="title">{{selected.name}}</h1>
+    <button class="button button-clear button-primary" ng-click="detailModal.hide()">Cancel</button>
+  </ion-header-bar>
+
+  <ion-content class="padding">
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Name</span>
+        <input ng-model="selected.name" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Phone</span>
+        <input ng-model="selected.phone" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Email</span>
+        <input ng-model="selected.email" type="text">
+      </label>
+      <ion-toggle ng-model="selected.isFavorite" toggle-class="toggle-energized" ng-click="toggleFavorite()">
+         Favorite
+      </ion-toggle>
+      <div class="row">
+        <div class="col">
+          <button class="button button-full button-positive" ng-click="editContact()">Edit</button>
+        </div>
+        <div class="col">
+          <button class="button button-full button-assertive" ng-click="deleteContact()">Delete</button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+
+</ion-modal-view>

@@ -1,0 +1,13 @@
+
+    <ion-header-bar class="bar-positive">
+        <h1 class="title">Favorites</h1>
+        </button>
+    </ion-header-bar>
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="contact in favorites" class="item-button-right">
+                <div class="name">{{contact.name}}</div>
+                <div>{{contact.phone}}</div>
+            </ion-item>
+        </ion-list>
+    </ion-content>

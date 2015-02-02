@@ -1,0 +1,27 @@
+<ion-modal-view>
+
+  <!-- Modal header bar -->
+  <ion-header-bar class="bar bar-header bar-positive">
+    <h1 class="title">New Contact</h1>
+    <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+  </ion-header-bar>
+
+  <ion-content class="padding">
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Name</span>
+        <input ng-model="newContact.name" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Phone</span>
+        <input ng-model="newContact.phone" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Email</span>
+        <input ng-model="newContact.email" type="text">
+      </label>
+      <button class="button button-full button-positive" ng-click="createContact()">Create</button>
+    </div>
+  </ion-content>
+
+</ion-modal-view>

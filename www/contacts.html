@@ -1,0 +1,17 @@
+
+    <ion-header-bar class="bar-positive">
+        <h1 class="title">My Contacts</h1>
+        <button class="button button-icon ion-compose" ng-click="showAddDialog()">
+        </button>
+    </ion-header-bar>
+    <ion-content>
+        <label class="item item-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input ng-model="search" type="text" placeholder="type here to search..">
+        </label>
+        <ion-list>
+            <ion-item ng-repeat="contact in contacts | filter:search" ng-click="showDetailDialog(contact)" >
+                {{contact.name}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
